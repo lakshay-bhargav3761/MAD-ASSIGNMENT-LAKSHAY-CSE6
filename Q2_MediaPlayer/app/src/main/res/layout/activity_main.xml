@@ -3,13 +3,11 @@
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <Button
         android:id="@+id/openFile"
         android:text="Open Audio File"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
     <Button
         android:id="@+id/openUrl"
         android:text="Play Video from URL"
@@ -21,7 +19,6 @@
         android:text="Play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
     <Button
         android:id="@+id/pause"
         android:text="Pause"
@@ -39,11 +36,9 @@
         android:text="Restart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="20dp"/>
-
 </LinearLayout>
