@@ -1,33 +1,133 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F1F3F6">
 
-    <!-- Accelerometer -->
-    <TextView
-        android:id="@+id/accelText"
-        android:text="Accelerometer Data"
-        android:textSize="18sp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <!-- Light Sensor -->
-    <TextView
-        android:id="@+id/lightText"
-        android:text="Light Sensor Data"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Sensor Dashboard"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <!-- Proximity Sensor -->
-    <TextView
-        android:id="@+id/proximityText"
-        android:text="Proximity Sensor Data"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Accelerometer Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</LinearLayout>
+            <TextView
+                android:text="📱 Accelerometer"
+                android:textStyle="bold"
+                android:textColor="#6200EE"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/accelText"
+                android:text="0.0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/accelBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="20"
+                android:progress="0"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+        </LinearLayout>
+
+        <!-- Light Sensor Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="💡 Light Sensor"
+                android:textStyle="bold"
+                android:textColor="#03A9F4"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/lightText"
+                android:text="0 lx"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/lightBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="1000"
+                android:progress="0"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+        </LinearLayout>
+
+        <!-- Proximity Sensor Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="🤏 Proximity"
+                android:textStyle="bold"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/proximityText"
+                android:text="Far"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/proximityBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="10"
+                android:progress="0"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

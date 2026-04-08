@@ -49,9 +49,12 @@ public class MainActivity extends AppCompatActivity {
         // 3. Spinner setup
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_item,
                 currencies
         );
+
+// Set dropdown layout
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         fromCurrency.setAdapter(adapter);
         toCurrency.setAdapter(adapter);
